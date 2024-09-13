@@ -1,0 +1,19 @@
+<script setup>
+import countries from "./countries";
+</script>
+
+<template>
+  <FormKit type="form" #default="{ value }" :actions="false">
+    <FormKit
+      type="autocomplete"
+      name="country"
+      label="Search for a country"
+      placeholder="Example: United States"
+      multiple
+      :close-on-select="false"
+      :options="countries"
+      popover
+    />
+    <pre wrap>{{ value }}</pre>
+  </FormKit>
+</template>
